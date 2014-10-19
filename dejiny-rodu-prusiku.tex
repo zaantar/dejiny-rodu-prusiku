@@ -1,0 +1,95 @@
+\documentclass[titlepage]{book}
+
+\usepackage[utf8]{inputenc}
+\usepackage[IL2]{fontenc}
+
+\usepackage[czech]{babel}
+\usepackage{ucs}
+\usepackage{a4wide}
+
+% basne
+\usepackage{verse}
+% autor basne
+\newcommand{\attrib}[1]{\nopagebreak{\raggedleft\footnotesize #1\par}}
+
+% absolutni pozice textu na strance (pro titulni stranku)
+\usepackage[absolute]{textpos}
+
+% vkladani obrazku do textu
+\usepackage{graphicx, float}
+
+% skladani dokumentu z vice souboru
+\usepackage{subfiles}
+
+% chceme odstavce bez odsazeni
+\usepackage{parskip}
+
+% odkazy uvnitr i vne dokumentu
+\usepackage{hyperref}
+
+
+% POZN.: v ubuntu je zapotrebi nainstalovat balik texlive-latex-extra
+% pro 12.04 LTS a starsi nestaci - nutno instalovat texlive z https://www.tug.org/texlive/quickinstall.html
+
+
+% cesta k obrazkum
+% absolutni cesta, aby bylo mozne generovat i jednotlive kapitoly z podadresare
+%\graphicspath{ {/home/zaantar/Dropbox/digitalizace_rodinne_kroniky/Rodinná kronika kronika/img/} }
+\graphicspath{ {./img/} }
+
+% biograficke symboly
+\newcommand{\born}{$\star$\ } 
+\newcommand{\died}{\dag \ } 
+
+\title{Dějiny rodu Prusíků}
+\author{Jaromír Prusík}
+\date{1515 - 1968}
+
+%%% DOKUMENT %%%
+\begin{document}
+
+\frontmatter
+
+\maketitle
+
+% kapitoly knihy
+\mainmatter
+
+\subfile{./tex/01-uvod}
+\subfile{./tex/02a-vetev-vyrov-zakladatel}
+\subfile{./tex/02b-vetev-vyrov-odnoz-horni-briza-1}
+\subfile{./tex/02c-vetev-vyrov-odnoz-horni-briza-2}
+\subfile{./tex/02d-vetev-vyrov-blazej-prusik}
+\subfile{./tex/02e-vetev-vyrov-odnoz-horni-briza-3}
+\subfile{./tex/02f-vetev-vyrov-odnoz-vyrov-1}
+\subfile{./tex/02g-vetev-vyrov-odnoz-hodyne}
+\subfile{./tex/02h-vetev-vyrov-odnoz-vyrov-2}
+\subfile{./tex/02i-vetev-vyrov-odnoz-kostelec-nad-mzi}
+\subfile{./tex/03-vetev-sedlec}
+\subfile{./tex/04-vetev-cervena-recice}
+\subfile{./tex/05-vetev-nebreziny}
+\subfile{./tex/06-vetev-plasy}
+\subfile{./tex/07-vetev-straziste}
+
+
+\appendix
+
+\tableofcontents
+
+\chapter{Digitální verze}
+
+Tuto kroniku společným úsilím digitalizovali:
+\begin{itemize}
+\item Zdeněk a Míla Prusíkovi - zapůjčení kroniky k digitalizaci
+\item Jan Štětina st. - oprava strojově digitalizovaného textu (OCR)
+\item Jan Štětina (\href{mailto:zaantar@zaantar.eu}{zaantar@zaantar.eu}) - oprava OCR, přepsání do \LaTeX
+\end{itemize}
+
+Digitalizace probíhala od května 2013 do ---. 
+
+Tento dokument byl vygenerován \today.
+
+\backmatter
+% TODO
+
+\end{document}
